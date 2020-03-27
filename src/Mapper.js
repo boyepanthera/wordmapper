@@ -19,7 +19,7 @@ export const Mapper = () => {
         rotationAngles: [0],
         scale: 'sqrt',
         spiral: 'archimedean',
-        transitionDuration: 4000,
+        transitionDuration: 2000,
     };
     const handleSubmit = (e) => {
         e.preventDefault();
