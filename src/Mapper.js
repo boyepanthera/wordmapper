@@ -19,7 +19,7 @@ export const Mapper = () => {
         rotationAngles: [0],
         scale: 'sqrt',
         spiral: 'archimedean',
-        transitionDuration: 3000,
+        transitionDuration: 4000,
     };
     const handleSubmit = (e) => {
         // console.log(e)
@@ -40,34 +40,33 @@ export const Mapper = () => {
             </div>
             <div>
                 <div className='text-center text-2xl'>Wordmap creation just got easier...</div>
-                <div className={rounded ? `bg-gray-200 w-1/3 h-full w-1/5 rounded-full mx-auto my-8` : `bg-gray-200 w-1/3 mx-auto my-8`}>
+                <div style={color} className={rounded ? `bg-gray-200 w-1/3 h-full w-1/5 rounded-full mx-auto my-8` : `bg-gray-200 w-1/3 mx-auto my-8`}>
                     <ReactWordcloud words={mapwords} options={options} className='w-full' />
                 </div>
                 <div className='w-1/3 mx-auto my-8 flex justify-between'>
                     <GithubPicker
-                        color={color}
                         onChange={handleChangeComplete}
                     />
                     <div >
                         <div>Shape</div>
                         <div className='flex justify-between align-middle'>
-                            <div onClick={() => setRounded(true)} className='h-8 w-8 bg-purple-700 inline rounded-full mr-2'></div>
-                            <div onClick={() => setRounded(false)} className='h-8 w-8 bg-purple-700 inline  rounded-none'></div>
+                            <div onClick={() => setRounded(true)} className='h-6 w-6 bg-purple-700 inline rounded-full mr-2'></div>
+                            <div onClick={() => setRounded(false)} className='h-6 w-6 bg-purple-700 inline  rounded-none'></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
                 <div className='mx-auto bg-white rounded-lg mb-20 shadow-2xl w-1/3 p-8 m-4'>
-                    <div className='text-center mb-4 uppercase text-xl'>Add Keywords</div>
+                    <div className='text-center mb-4 uppercase text-lg'>Add Keywords</div>
                     <form onSubmit={handleSubmit}>
                         <div className='flex flex-wrap justify-between mb-3'>
                             <div className='w-full sm:w-1/2  min-w-sm'>
-                                <label htmlFor='text'>Text</label>
+                                <label htmlFor='text' className='text-sm'>Text</label>
                                 <input type='text' name='text' placeholder='e.g Oil war' className='p-2 block w-full border border-gray-300' />
                             </div>
                             <div className='w-full sm:w-1/2 min-w-sm'>
-                                <label htmlFor='value'>Weight</label>
+                                <label htmlFor='value' className='text-sm'>Weight</label>
                                 <input type='number' name='value' placeholder='In number 1-100 range' className=' border border-gray-300 p-2 block w-full' />
                             </div>
                             <div className='w-full my-2 align-middle'>
