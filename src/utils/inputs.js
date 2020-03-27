@@ -36,7 +36,7 @@ export const words = [
         value: 74
     },
     {
-        text: "Exchange rate devaluation",
+        text: "Devaluation",
         value: 67
     },
     {
