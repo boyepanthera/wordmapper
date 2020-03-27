@@ -36,7 +36,7 @@ export const Mapper = () => {
     return (
         <div className="h-screen">
             <div className='px-16'>
-                <img className='h-20 w-20' src={LogoSrc} alt='Wordmap logo' />
+                <img className='h-20 w-20' src={LogoSrc} alt='Wordmap Logo' />
             </div>
             <div>
                 <div className='text-center text-2xl'>Wordmap creation just got easier...</div>
