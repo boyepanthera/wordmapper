@@ -6,13 +6,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "postcss-cli": "^7.1.0",
+    "re-resizable": "^6.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-wordcloud": "^1.2.2",
+    "tailwindcss": "^1.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "postcss ./src/App.css -o ./src/assets/styles/output.css  &react-scripts start",
+    "dev": "postcss ./src/App.css -o ./src/assets/styles/output.css & react-scripts start",
+    "build": "postcss ./src/App.css -o ./src/assets/styles/output.css & react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -30,5 +35,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.5"
   }
 }
