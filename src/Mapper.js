@@ -40,7 +40,7 @@ export const Mapper = () => {
             </div>
             <div>
                 <div className='text-center text-2xl'>Wordmap creation just got easier...</div>
-                <div style={color} className={rounded ? `bg-gray-200 w-1/3 h-full w-1/5 rounded-full mx-auto my-8` : `bg-gray-200 w-1/3 mx-auto my-8`}>
+                <div style={color} className={rounded ? `bg-gray-200 sm:w-1/3 h-full  rounded-full mx-auto my-8` : `bg-gray-200 sm:w-1/3 w-full mx-3 sm:mx-auto my-8`}>
                     <ReactWordcloud words={mapwords} options={options} className='w-full' />
                 </div>
                 <div className='w-1/3 mx-auto my-8 flex justify-between'>
