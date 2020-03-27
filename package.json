@@ -11,6 +11,7 @@
     "react": "^16.13.1",
     "react-color": "^2.18.0",
     "react-dom": "^16.13.1",
+    "react-image": "^2.4.0",
     "react-scripts": "3.4.1",
     "react-wordcloud": "^1.2.2",
     "tailwindcss": "^1.2.0"

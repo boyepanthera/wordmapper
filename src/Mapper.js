@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { words } from './utils/inputs';
 import ReactWordcloud from 'react-wordcloud';
 import LogoSrc from './assets/images/mapper.PNG'
-import { GithubPicker } from 'react-color';
+import { BlockPicker } from 'react-color';
 
 export const Mapper = () => {
     const [mapwords, setMapwords] = useState(words);
-    const [rounded, setRounded] = useState(true);
+    const [rounded, setRounded] = useState(false);
     const options = {
         enableTooltip: true,
         deterministic: true,
@@ -22,7 +22,6 @@ export const Mapper = () => {
         transitionDuration: 4000,
     };
     const handleSubmit = (e) => {
-        // console.log(e)
         e.preventDefault();
         const newWord = {
             text: e.target.text.value,
@@ -31,8 +30,9 @@ export const Mapper = () => {
         setMapwords([...mapwords, newWord]);
         e.target.reset();
     }
-    const [color, setColor] = useState({ background: '#FC8181' });
-    const handleChangeComplete = color => setColor({ background: color.hex });
+    const [color, setColor] = useState({ background: '#EDF2F7' });
+    const handleChange = color => setColor({ background: color.hex });
+
     return (
         <div className="h-screen">
             <div className='px-16'>
@@ -44,8 +44,10 @@ export const Mapper = () => {
                     <ReactWordcloud words={mapwords} options={options} className='w-full' />
                 </div>
                 <div className='w-1/3 mx-auto my-8 flex justify-between'>
-                    <GithubPicker
-                        onChange={handleChangeComplete}
+                    <BlockPicker
+                        color={color.background}
+                        width='200px'
+                        onChange={handleChange}
                     />
                     <div >
                         <div>Shape</div>
