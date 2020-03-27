@@ -5,21 +5,21 @@ import LogoSrc from './assets/images/mapper.PNG'
 import { GithubPicker } from 'react-color';
 
 export const Mapper = () => {
-    const [mapwords, setMapwords] = useState(words)
+    const [mapwords, setMapwords] = useState(words);
+    const [rounded, setRounded] = useState(true);
     const options = {
-        // colors: ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'],
         enableTooltip: true,
         deterministic: true,
         fontFamily: 'impact',
         fontSizes: [20, 60],
         fontStyle: 'normal',
         fontWeight: 'normal',
-        padding: 1,
+        padding: 5,
         rotations: 1,
         rotationAngles: [0],
         scale: 'sqrt',
         spiral: 'archimedean',
-        transitionDuration: 1000,
+        transitionDuration: 3000,
     };
     const handleSubmit = (e) => {
         // console.log(e)
@@ -40,7 +40,7 @@ export const Mapper = () => {
             </div>
             <div>
                 <div className='text-center text-2xl'>Wordmap creation just got easier...</div>
-                <div className='bg-gray-200 w-1/3 mx-auto my-8'>
+                <div className={rounded ? `bg-gray-200 w-1/3 h-full w-1/5 rounded-full mx-auto my-8` : `bg-gray-200 w-1/3 mx-auto my-8`}>
                     <ReactWordcloud words={mapwords} options={options} className='w-full' />
                 </div>
                 <div className='w-1/3 mx-auto my-8 flex justify-between'>
@@ -48,7 +48,13 @@ export const Mapper = () => {
                         color={color}
                         onChange={handleChangeComplete}
                     />
-                    <i className="fas fa-toggle-on text-purple-700 text-3xl"></i>
+                    <div >
+                        <div>Shape</div>
+                        <div className='flex justify-between align-middle'>
+                            <div onClick={() => setRounded(true)} className='h-8 w-8 bg-purple-700 inline rounded-full mr-2'></div>
+                            <div onClick={() => setRounded(false)} className='h-8 w-8 bg-purple-700 inline  rounded-none'></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div>
