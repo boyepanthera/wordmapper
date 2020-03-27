@@ -9,6 +9,7 @@
     "postcss-cli": "^7.1.0",
     "re-resizable": "^6.2.0",
     "react": "^16.13.1",
+    "react-color": "^2.18.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "react-wordcloud": "^1.2.2",

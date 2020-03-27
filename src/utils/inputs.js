@@ -5,7 +5,7 @@ export const words = [
     },
     {
         text: "Corona Virus",
-        value: 35
+        value: 85
     },
     {
         text: "Pandemic",
@@ -13,11 +13,11 @@ export const words = [
     },
     {
         text: "CBN Circular",
-        value: 20
+        value: 50
     },
     {
         text: "Unemployment",
-        value: 40
+        value: 50
     },
     {
         text: "Stock up",
@@ -29,7 +29,7 @@ export const words = [
     },
     {
         text: "$25 Oil price",
-        value: 21
+        value: 51
     },
     {
         text: "Lock down",
@@ -41,10 +41,10 @@ export const words = [
     },
     {
         text: "#380 Exchange rate",
-        value: 38
+        value: 48
     },
     {
         text: "Declining reserves",
-        value: 28
+        value: 58
     }
 ]
