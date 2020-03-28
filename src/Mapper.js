@@ -34,16 +34,16 @@ export const Mapper = () => {
     const handleChange = color => setColor({ background: color.hex });
 
     return (
-        <div className="h-screen">
-            <div className='px-16'>
+        <div className="h-screen p-6">
+            <div className='sm:px-16 -p-2'>
                 <img className='h-20 w-20' src={LogoSrc} alt='Wordmap Logo' />
             </div>
             <div>
                 <div className='text-center text-2xl'>Wordmap creation just got easier...</div>
-                <div style={color} className={rounded ? `bg-gray-200 sm:w-1/3 h-full  rounded-full mx-auto my-8` : `bg-gray-200 sm:w-1/3 w-full mx-3 sm:mx-auto my-8`}>
+                <div style={color} className={rounded ? `bg-gray-200 sm:w-1/3 h-full  rounded-full mx-auto my-8` : `bg-gray-200 sm:w-1/3 w-full sm:mx-auto my-8`}>
                     <ReactWordcloud words={mapwords} options={options} className='w-full' />
                 </div>
-                <div className='w-1/3 mx-auto my-8 flex justify-between'>
+                <div className='sm:w-1/3 w-full sm:mx-auto my-8 flex justify-between'>
                     <BlockPicker
                         color={color.background}
                         width='200px'
@@ -58,8 +58,8 @@ export const Mapper = () => {
                     </div>
                 </div>
             </div>
-            <div>
-                <div className='mx-auto bg-white rounded-lg mb-20 shadow-2xl w-1/3 p-8 m-4'>
+            <div className=''>
+                <div className='bg-white sm:mx-auto rounded-lg mb-20 shadow-2xl sm:w-1/3 w-full p-8'>
                     <div className='text-center mb-4 uppercase text-lg'>Add Keywords</div>
                     <form onSubmit={handleSubmit}>
                         <div className='flex flex-wrap justify-between mb-3'>
