@@ -18,9 +18,9 @@
     "tailwindcss": "^1.2.0"
   },
   "scripts": {
-    "start": "tailwind build ./src/App.css -o ./src/assets/styles/output.css  & serve -s build",
-    "dev": "tailwind build ./src/App.css -o ./src/assets/styles/output.css & react-scripts start",
-    "build": "tailwind build ./src/App.css -o ./src/assets/styles/output.css & react-scripts build",
+    "start": "postcss ./src/App.css -o ./src/assets/styles/output.css  & serve -s build",
+    "dev": "postcss ./src/App.css -o ./src/assets/styles/output.css & react-scripts start",
+    "build": "postcss ./src/App.css -o ./src/assets/styles/output.css & react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
